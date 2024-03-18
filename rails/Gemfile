@@ -7,6 +7,8 @@ gem "bootsnap", require: false
 
 gem "mecab"
 
+gem "natto"
+
 gem "pg", "~> 1.1"
 
 gem "puma", "~> 6.4.0"
