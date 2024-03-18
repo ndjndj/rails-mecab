@@ -8,6 +8,7 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/Gemfile 
 COPY Gemfile.lock /usr/src/app/Gemfile.lock 
+COPY mecabrc /etc/mecabrc
 
 RUN gem update --system 
 RUN bundle update --bundler 
