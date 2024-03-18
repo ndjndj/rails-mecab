@@ -1,7 +1,8 @@
 FROM ruby:3.3.0
 RUN apt-get update -qq && apt-get install -y vim 
 
-RUN apt-get install libmecab2 libmecab-dev mecab unidic-mecab mecab-utils 
+RUN apt-get install libmecab2 libmecab-dev mecab mecab-ipadic mecab-ipadic-utf8 mecab-utils 
+RUN apt-get install -y unidic-mecab
 RUN apt-get install -y build-essential
 
 RUN mkdir /usr/src/app 
