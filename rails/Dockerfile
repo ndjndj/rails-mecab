@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/Gemfile 
 COPY Gemfile.lock /usr/src/app/Gemfile.lock 
 RUN sed -i 's/^dicdir/;dicdir/' /etc/mecabrc
-RUN echo -e "\ndicdir = /var/lib/mecab/dic/unidic" >> /etc/mecabrc
+RUN echo "\ndicdir = /var/lib/mecab/dic/unidic" >> /etc/mecabrc
 
 RUN gem update --system 
 RUN bundle update --bundler 
